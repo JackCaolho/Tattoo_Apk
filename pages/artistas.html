@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InkLink | Artistas</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="artists">
+  <header class="topbar">
+    <a class="brand" href="../index.html">InkLink</a>
+    <nav>
+      <a href="./artistas.html" aria-current="page">Artistas</a>
+      <a href="./agendamento.html">Agendar</a>
+      <a href="./cadastro.html">Cadastro</a>
+      <a href="./dashboard-tatuador.html">Area do Tatuador</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">Descubra talentos</p>
+      <h1>Tatuadores por estilo</h1>
+      <p>Filtre por cidade, tecnica e faixa de preco.</p>
+    </section>
+
+    <section class="section filters">
+      <label>
+        Cidade
+        <input id="filter-city" type="text" placeholder="Ex: Sao Paulo" />
+      </label>
+      <label>
+        Estilo
+        <input id="filter-style" type="text" placeholder="Ex: Realismo" />
+      </label>
+      <button id="apply-filters" class="btn btn-primary" type="button">Filtrar</button>
+    </section>
+
+    <section class="section">
+      <div id="artists-list" class="grid cards"></div>
+    </section>
+  </main>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

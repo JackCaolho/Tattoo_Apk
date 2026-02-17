@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InkLink | Cadastro</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="register">
+  <header class="topbar">
+    <a class="brand" href="../index.html">InkLink</a>
+    <nav>
+      <a href="./artistas.html">Artistas</a>
+      <a href="./agendamento.html">Agendar</a>
+      <a href="./cadastro.html" aria-current="page">Cadastro</a>
+      <a href="./dashboard-tatuador.html">Area do Tatuador</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">Seu perfil, seu corre</p>
+      <h1>Entrar para a InkLink</h1>
+      <p>Escolha o perfil e monte sua conta. Cliente em 1 minuto, tatuador com setup completo.</p>
+    </section>
+
+    <section class="section register-shell">
+      <div class="signup-switch card">
+        <button class="switch-btn is-active" type="button" data-switch-form="client" aria-pressed="true">Sou cliente</button>
+        <button class="switch-btn" type="button" data-switch-form="artist" aria-pressed="false">Sou tatuador(a)</button>
+      </div>
+
+      <div class="register-layout">
+        <form id="client-form" class="card form-card register-form" data-form="client">
+          <h2>Cadastro cliente</h2>
+          <div class="form-grid">
+            <label>Nome completo
+              <input name="name" required />
+            </label>
+            <label>Email
+              <input name="email" type="email" required />
+            </label>
+            <label>Telefone
+              <input name="phone" type="tel" placeholder="(11) 99999-9999" required />
+            </label>
+            <label>Cidade
+              <input name="city" placeholder="Ex: Sao Paulo" required />
+            </label>
+            <label>Data de nascimento
+              <input name="birthdate" type="date" required />
+            </label>
+            <label>Estilo que curte
+              <input name="favStyle" placeholder="Fine Line, Old School, Realismo..." />
+            </label>
+          </div>
+          <label>Observacoes rapidas
+            <textarea name="notes" rows="3" placeholder="Alergia, preferencia de regiao do corpo, etc."></textarea>
+          </label>
+          <label class="checkline">
+            <input type="checkbox" name="terms" required />
+            <span>Aceito os termos de uso e a politica de privacidade.</span>
+          </label>
+          <button class="btn btn-primary" type="submit">Criar conta cliente</button>
+        </form>
+
+        <form id="artist-form" class="card form-card register-form is-hidden" data-form="artist">
+          <h2>Cadastro tatuador(a)</h2>
+          <div class="form-grid">
+            <label>Nome artistico
+              <input name="stageName" required />
+            </label>
+            <label>Nome completo
+              <input name="fullName" required />
+            </label>
+            <label>Email profissional
+              <input name="email" type="email" required />
+            </label>
+            <label>Telefone/WhatsApp
+              <input name="phone" type="tel" required />
+            </label>
+            <label>Instagram/Portfolio
+              <input name="social" placeholder="@seuuser" required />
+            </label>
+            <label>Anos de experiencia
+              <input name="experience" type="number" min="0" max="60" required />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Estilos mais tatuados</legend>
+            <div class="check-grid">
+              <label class="checkline"><input type="checkbox" name="styles" value="Fine Line" /> <span>Fine Line</span></label>
+              <label class="checkline"><input type="checkbox" name="styles" value="Realismo" /> <span>Realismo</span></label>
+              <label class="checkline"><input type="checkbox" name="styles" value="Blackwork" /> <span>Blackwork</span></label>
+              <label class="checkline"><input type="checkbox" name="styles" value="Old School" /> <span>Old School</span></label>
+              <label class="checkline"><input type="checkbox" name="styles" value="Geek" /> <span>Geek</span></label>
+              <label class="checkline"><input type="checkbox" name="styles" value="Aquarela" /> <span>Aquarela</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Modelo de preco</legend>
+            <div class="check-grid">
+              <label class="checkline"><input type="radio" name="priceModel" value="por-projeto" required /> <span>Por projeto</span></label>
+              <label class="checkline"><input type="radio" name="priceModel" value="por-hora" /> <span>Por hora</span></label>
+              <label class="checkline"><input type="radio" name="priceModel" value="por-tamanho" /> <span>Por tamanho/area</span></label>
+            </div>
+            <label>Valor minimo (R$)
+              <input name="minPrice" type="number" min="0" step="10" required />
+            </label>
+          </fieldset>
+
+          <div class="form-grid">
+            <label>Dias de atendimento
+              <input name="days" placeholder="Seg-Sab, Ter-Qui..." required />
+            </label>
+            <label>Horario medio
+              <input name="hours" placeholder="10:00 as 19:00" required />
+            </label>
+            <label>Cidade do studio
+              <input name="studioCity" required />
+            </label>
+            <label>Bairro/Regiao
+              <input name="studioRegion" required />
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Onde voce atende</legend>
+            <div class="check-grid">
+              <label class="checkline"><input type="checkbox" name="serviceMode" value="studio" /> <span>No studio</span></label>
+              <label class="checkline"><input type="checkbox" name="serviceMode" value="home" /> <span>A domicilio</span></label>
+              <label class="checkline"><input type="checkbox" name="serviceMode" value="guest" /> <span>Guest spot/eventos</span></label>
+            </div>
+          </fieldset>
+
+          <label>Bio curta
+            <textarea name="bio" rows="4" placeholder="Fala sobre sua proposta, clima do atendimento e especialidades."></textarea>
+          </label>
+
+          <label class="checkline">
+            <input type="checkbox" name="terms" required />
+            <span>Aceito os termos da plataforma e confirmo que sou profissional ativo(a).</span>
+          </label>
+
+          <button class="btn btn-primary" type="submit">Criar perfil tatuador(a)</button>
+        </form>
+
+        <aside class="card signup-side">
+          <h2>Dica rapida</h2>
+          <ul class="tip-list">
+            <li>Perfis completos fecham mais agenda.</li>
+            <li>Mostre nicho, faixa de valor e estilo principal.</li>
+            <li>Responda rapido para subir no ranking interno.</li>
+          </ul>
+          <p id="register-feedback" class="feedback"></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

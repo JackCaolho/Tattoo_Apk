@@ -1,0 +1,64 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InkLink | Agendamento</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="booking">
+  <header class="topbar">
+    <a class="brand" href="../index.html">InkLink</a>
+    <nav>
+      <a href="./artistas.html">Artistas</a>
+      <a href="./agendamento.html" aria-current="page">Agendar</a>
+      <a href="./cadastro.html">Cadastro</a>
+      <a href="./dashboard-tatuador.html">Area do Tatuador</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero compact">
+      <p class="eyebrow">Feche seu horario</p>
+      <h1>Agendar tattoo</h1>
+      <p>Fluxo inicial para validacao do produto.</p>
+    </section>
+
+    <section class="section form-wrap">
+      <form id="booking-form" class="card form-card">
+        <label>Nome
+          <input name="name" required />
+        </label>
+        <label>Email
+          <input name="email" type="email" required />
+        </label>
+        <label>Artista
+          <select name="artist" id="booking-artist" required></select>
+        </label>
+        <label>Estilo desejado
+          <input name="style" placeholder="Old School, Fine Line..." required />
+        </label>
+        <label>Data preferencial
+          <input name="date" type="date" required />
+        </label>
+        <label>Descricao
+          <textarea name="details" rows="4" placeholder="Tamanho, local do corpo, referencia..."></textarea>
+        </label>
+        <button class="btn btn-primary" type="submit">Solicitar agendamento</button>
+      </form>
+      <aside class="card info-card">
+        <h2>Como funciona</h2>
+        <ol>
+          <li>Escolha o artista</li>
+          <li>Envie seu pedido</li>
+          <li>Receba retorno com valor e confirmacao</li>
+        </ol>
+        <p id="booking-feedback" class="feedback"></p>
+      </aside>
+    </section>
+  </main>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
