@@ -34,6 +34,31 @@
       <div id="featured-artists" class="grid cards"></div>
     </section>
 
+    <section class="section">
+      <h2>Feed da comunidade</h2>
+      <p>Um mural no estilo Pinterest com os trampos da plataforma.</p>
+      <div class="feed-controls card">
+        <label>
+          Estilo
+          <select id="feed-style"></select>
+        </label>
+        <label>
+          Buscar por tag
+          <input id="feed-tag" type="text" placeholder="Ex: black, floral, anime" />
+        </label>
+        <label>
+          Ordenar
+          <select id="feed-sort">
+            <option value="likes">Mais curtidas</option>
+            <option value="recent">Mais recentes</option>
+          </select>
+        </label>
+        <button class="btn btn-ghost" id="feed-clear" type="button">Limpar filtros</button>
+      </div>
+      <div id="feed-chips" class="chip-row"></div>
+      <div id="feed-grid" class="masonry-grid"></div>
+    </section>
+
     <section class="section metrics">
       <article>
         <h3>+120</h3>
